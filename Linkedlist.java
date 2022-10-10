@@ -1,5 +1,5 @@
 package assignments;
-import java.util.*;
+import java.util.*; //Example1
 public class Linkedlist {
 	// Java program to check if
 	// linked list is circular
@@ -42,19 +42,19 @@ public class Linkedlist {
 		public static void main(String args[])
 		{
 			/* Start with the empty list */
-			Node head = newNode(1);
+			Node head = newNode(3);
 			head.next = newNode(2);
-			head.next.next = newNode(3);
-			head.next.next.next = newNode(4);
+			head.next.next = newNode(0);
+			head.next.next.next = newNode(-4);
 
-			System.out.print(isCircular(head) ? "Yes\n"
-											: "No\n");
+			System.out.print(isCircular(head) ? "True\n"
+											: "False\n");
 
 			// Making linked list circular
 			head.next.next.next.next = head;
 
-			System.out.print(isCircular(head) ? "Yes\n"
-											: "No\n");
+			System.out.print(isCircular(head) ? "True\n"
+											: "False\n");
 		}
 	}
 
